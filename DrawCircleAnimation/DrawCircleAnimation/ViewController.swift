@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     // MARK: - operation
     
     func layerConfigure() {
-        let lineWidth:CGFloat = 5.0
+        let lineWidth:CGFloat = 8.0
         let startAngle:CGFloat = -90.0
         let endAngle:CGFloat = 270.01
         
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         self.circle.path          = self.circlePath.cgPath
         self.circle.lineCap       = CAShapeLayerLineCap.round
         self.circle.fillColor     = UIColor.clear.cgColor
-        self.circle.strokeColor   = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        self.circle.strokeColor   = #colorLiteral(red: 0.9411764706, green: 0.5137254902, blue: 0.1529411765, alpha: 1)
         self.circle.lineWidth     = lineWidth
         self.circle.zPosition     = 1;
         self.circle.strokeStart   = 0.0
