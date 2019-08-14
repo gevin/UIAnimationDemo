@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         moveAlongPath.timingFunctions = [CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)]
         moveAlongPath.fillMode = CAMediaTimingFillMode.forwards
 
-        // item 往右轉30度，模擬有慣性
+        // item 往右轉30度，模擬往前衝的慣性
         item.layer.transform = CATransform3DMakeRotation( CGFloat.pi * (1.0/6.0), 0.0, 0.0, 1.0)
         
         // 移動動畫結束後，往左旋轉回0度
