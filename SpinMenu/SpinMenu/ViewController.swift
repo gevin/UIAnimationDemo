@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // create item
         var imageNames = ["icons8-budgie", "icons8-dove", "icons8-flamingo", "icons8-flying-duck", "icons8-hummingbird", "icons8-kiwi-bird", "icons8-owl" ]
-        
         for i in 0..<imageNames.count {
             let menuItem = UIView()
             let control = UIControl(frame: CGRect.zero)
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         animationGroup.fillMode = CAMediaTimingFillMode.forwards
         animationGroup.duration = 1.5 // 要設定總時間長度，不然動畫跑到一半就停了
         animationGroup.delegate = item
-        
+        item.layer.anchorPoint = CGPoint(x: 0.5, y: 1.0) // 讓軸心在底部，default is (0.5, 0.5)
         item.layer.add(animationGroup, forKey: "animGroup\(item.tag)")
         item.center = self.convertPoint(center: button.center, radius: radius, angle: endAngle)
         item.isHidden = false

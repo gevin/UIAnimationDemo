@@ -13,31 +13,31 @@
         <!--View Controller-->
         <scene sceneID="rfJ-H6-hki">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="DWS-GT-BQe" customClass="ViewController" customModule="ClipAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="DWS-GT-BQe" customClass="ViewController" customModule="MaskAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8b9-wC-fi0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eno-oB-pWe">
-                                <rect key="frame" x="0.0" y="44" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="714"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiC-NG-0gy">
-                                <rect key="frame" x="147" y="816" width="42" height="30"/>
+                                <rect key="frame" x="147" y="766" width="42" height="30"/>
                                 <state key="normal" title="View2"/>
                                 <connections>
                                     <action selector="button2Clicked:" destination="DWS-GT-BQe" eventType="touchUpInside" id="7X8-4I-PiV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwz-Nt-lzn">
-                                <rect key="frame" x="263" y="816" width="43" height="30"/>
+                                <rect key="frame" x="263" y="766" width="43" height="30"/>
                                 <state key="normal" title="View3"/>
                                 <connections>
                                     <action selector="button3Clicked:" destination="DWS-GT-BQe" eventType="touchUpInside" id="ABH-dY-ucr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ7-BK-43L">
-                                <rect key="frame" x="35" y="816" width="40" height="30"/>
+                                <rect key="frame" x="35" y="766" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="g00-fU-Q5y"/>
                                 </constraints>
@@ -46,19 +46,28 @@
                                     <action selector="button1Clicked:" destination="DWS-GT-BQe" eventType="touchUpInside" id="B6D-qE-1h2"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HZm-9m-kLx">
+                                <rect key="frame" x="18" y="804" width="378" height="31"/>
+                                <connections>
+                                    <action selector="slideChanged:" destination="DWS-GT-BQe" eventType="valueChanged" id="JaJ-SA-79i"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NJ7-BK-43L" firstAttribute="leading" secondItem="FTN-Wk-ENd" secondAttribute="leading" constant="35" id="0ru-Xz-yGv"/>
                             <constraint firstItem="eno-oB-pWe" firstAttribute="leading" secondItem="FTN-Wk-ENd" secondAttribute="leading" id="1hy-yr-e7p"/>
+                            <constraint firstItem="HZm-9m-kLx" firstAttribute="leading" secondItem="FTN-Wk-ENd" secondAttribute="leading" constant="20" id="363-du-qFi"/>
                             <constraint firstItem="QiC-NG-0gy" firstAttribute="centerY" secondItem="NJ7-BK-43L" secondAttribute="centerY" id="BUt-9t-aWW"/>
                             <constraint firstItem="eno-oB-pWe" firstAttribute="top" secondItem="FTN-Wk-ENd" secondAttribute="top" id="DGA-BW-aqe"/>
+                            <constraint firstItem="FTN-Wk-ENd" firstAttribute="trailing" secondItem="HZm-9m-kLx" secondAttribute="trailing" constant="20" id="OfV-GG-dGY"/>
+                            <constraint firstItem="HZm-9m-kLx" firstAttribute="top" secondItem="NJ7-BK-43L" secondAttribute="bottom" constant="8" id="UPD-Z5-jCf"/>
                             <constraint firstItem="QiC-NG-0gy" firstAttribute="leading" secondItem="NJ7-BK-43L" secondAttribute="trailing" constant="72" id="VBJ-rT-Ujo"/>
                             <constraint firstItem="FTN-Wk-ENd" firstAttribute="trailing" secondItem="eno-oB-pWe" secondAttribute="trailing" id="j1Q-4T-kod"/>
                             <constraint firstItem="NJ7-BK-43L" firstAttribute="top" secondItem="eno-oB-pWe" secondAttribute="bottom" constant="8" id="mhI-es-i2Y"/>
                             <constraint firstItem="vwz-Nt-lzn" firstAttribute="leading" secondItem="QiC-NG-0gy" secondAttribute="trailing" constant="74" id="w7k-ND-apX"/>
                             <constraint firstItem="vwz-Nt-lzn" firstAttribute="centerY" secondItem="QiC-NG-0gy" secondAttribute="centerY" id="wJ2-HV-xXT"/>
-                            <constraint firstItem="FTN-Wk-ENd" firstAttribute="bottom" secondItem="NJ7-BK-43L" secondAttribute="bottom" constant="16" id="yOa-bp-5ka"/>
+                            <constraint firstItem="FTN-Wk-ENd" firstAttribute="bottom" secondItem="NJ7-BK-43L" secondAttribute="bottom" constant="66" id="yOa-bp-5ka"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FTN-Wk-ENd"/>
                     </view>
@@ -67,6 +76,7 @@
                         <outlet property="button2" destination="QiC-NG-0gy" id="ir3-a0-plM"/>
                         <outlet property="button3" destination="vwz-Nt-lzn" id="IgO-L1-qC0"/>
                         <outlet property="containerView" destination="eno-oB-pWe" id="i1Q-3b-Cm8"/>
+                        <outlet property="slide" destination="HZm-9m-kLx" id="E5Y-iV-K4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wS-gi-p6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
