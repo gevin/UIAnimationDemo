@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7Q-ab-hX6">
-                                <rect key="frame" x="171.5" y="731" width="71" height="34"/>
+                                <rect key="frame" x="171.5" y="252" width="71" height="34"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.25021404110000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
                                 <state key="normal" title="Switch"/>
@@ -27,9 +27,8 @@
                                     <action selector="switchClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEn-7b-4Tx"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZH-fW-WB1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZH-fW-WB1">
                                 <rect key="frame" x="0.0" y="148" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4v-d2-E7J">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -59,12 +58,18 @@
                                     </navigationBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hHV-3d-eP2"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AZH-fW-WB1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7vT-sV-cZQ"/>
+                            <constraint firstItem="AZH-fW-WB1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="Ebf-ae-V8n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AZH-fW-WB1" secondAttribute="trailing" id="I7q-UZ-dNa"/>
                             <constraint firstItem="w7Q-ab-hX6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JiO-fy-a0u"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w7Q-ab-hX6" secondAttribute="bottom" constant="97" id="liB-ja-biy"/>
+                            <constraint firstItem="w7Q-ab-hX6" firstAttribute="top" secondItem="AZH-fW-WB1" secondAttribute="bottom" constant="60" id="gCo-MQ-2kp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

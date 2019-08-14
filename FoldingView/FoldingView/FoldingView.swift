@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoldingView: UIView, CAAnimationDelegate {
+class FoldingView: UIView {
 
     var showSnapshot = true
     var halfFlipDuration = 0.3
@@ -188,7 +188,10 @@ class FoldingView: UIView, CAAnimationDelegate {
         anim?.index = index 
         anim?.layer = layer
     }
-        
+}
+
+extension FoldingView: CAAnimationDelegate {
+    
     func animationDidStart(_ anim: CAAnimation) {
         guard let flipAnim = anim as? CABasicAnimation else {return}
         guard let flipLayer = flipAnim.layer else {return}
@@ -228,7 +231,6 @@ class FoldingView: UIView, CAAnimationDelegate {
     private func isOneFlipFinish( anim: CABasicAnimation ) -> Bool {
         return (anim.index % 2 == 1)
     }
-    
 }
 
 extension CABasicAnimation {
